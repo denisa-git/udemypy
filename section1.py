@@ -1,21 +1,21 @@
-#ce1
+#e1
 print("Hello World")
 
-# ce2
+#e2
 print("i want a job")
 
-#ce3
+#e3
 name = "John"
 city = "New York"
 country = "USA"
 
-#ce4
+#e4
 firstname = "John"
 middlename = "Name"
 lastname = "Name"
 person = [firstname, middlename, lastname]
 
-#ce5
+#e5
 firstname = 'John'
 middlename = 'Jack'
 lastname = 'Smith'
@@ -23,7 +23,7 @@ lastname = 'Smith'
 person = [firstname, middlename, lastname, "New York"]
 print(person)
 
-#ce6
+#e6
 w1 = "1"
 w2 = "2" 
 w3 = "w"
@@ -31,10 +31,10 @@ w3 = "w"
 words = [w1,w2,w3]
 print(words)
 
-#ce7
+#e7
 list = ["list","of","items"]
 print(type(list))
 
-#ce8
+#e8
 title = input("Enter title: ")
 print("title length is",len(title))
