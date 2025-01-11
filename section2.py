@@ -42,7 +42,7 @@ while statement != "YES":
     statement = input("do you looove me? ")
 print("ty :)")
 
-# try by myself
+# try by myself 1 to 6 vertical and horizontal
 x = 0
 while x < 6:
     x = x + 1
@@ -54,3 +54,7 @@ while (var < 6):
     var = var + 1
     list.append(var)
 print(list)
+
+#e13
+print(dir(list))
+print(help(list.count))
