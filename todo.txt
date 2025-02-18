@@ -1,4 +1,8 @@
-eat
-shower
-print
-understand
+check
+check again
+one more
+wake up
+brush teeth
+make coffee
+do makeup
+be on time
