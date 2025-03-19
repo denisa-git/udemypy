@@ -1,13 +1,5 @@
-def get_read_file(filepath = 'todo.txt'):
-    with open(filepath , 'r') as file:
-        todolist = file.readlines()
-    return todolist
-
-# pass the list to the function
-def write_file(data , filepath = 'todo.txt'):
-    with open(filepath , 'w') as file:
-        file.writelines(data)
-
+# from functions import get_read_file, write_file
+import functions
 
 while True:
     action = input("add, edit, remove, show or exit to do list? ")
@@ -16,13 +8,13 @@ while True:
         #get item from user
         todonew = action[4:]
 
-        todolist = get_read_file()
+        todolist = functions.get_read_file()
 
         #add new user to do item to the new list
         todolist.append(todonew + '\n')
 
         #override old file with new list of items
-        write_file(todolist)
+        functions.write_file(todolist)
         
 
 
@@ -30,14 +22,14 @@ while True:
         try:
             edit = int(action[5:])
 
-            todolist = get_read_file()
+            todolist = functions.get_read_file()
 
             if edit <= len(todolist):
                 todolist[edit-1] = input("new to do: ") + "\n"
             else:
                 print("learn how to count too")
 
-            write_file(todolist)
+            functions.write_file(todolist)
 
         except ValueError:
             print("invalid try again")
@@ -48,7 +40,7 @@ while True:
         try:
             remove = int(action[7:])
 
-            todolist = get_read_file()
+            todolist = functions.get_read_file()
 
             #store the item that you want removed so you can display it 
             remove_item = todolist[remove-1].strip('\n') 
@@ -64,7 +56,7 @@ while True:
             print(removed)
 
             #override the file with the new list
-            write_file(todolist)
+            functions.write_file(todolist)
 
         except ValueError:
             print("invalid try again")
@@ -72,7 +64,7 @@ while True:
 
 
     elif action.startswith('show'):
-        todolist = get_read_file()
+        todolist = functions.get_read_file()
 
         #list comprehension
         # newlist = [item.strip("\n") for item in todolist]
